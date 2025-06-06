@@ -6,6 +6,14 @@ import type { Container, Engine, MoveDirection, OutMode } from "@tsparticles/eng
 export default function Hero() {
   const [init, setInit] = useState(false);
 
+  const scrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const servicesSection = document.querySelector('#servicios');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -106,17 +114,24 @@ export default function Hero() {
       {/* Contenido del Hero */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <h1 className="text-5xl font-extrabold text-[#fcfad4] sm:text-6xl lg:text-7xl leading-tight">
-          Soluciones de Impresión <br className="sm:hidden"/>Profesional
+          Printech impresoras <br className="sm:hidden"/> profesionales
         </h1>
         <p className="mt-6 text-xl text-white max-w-3xl">
-          Impresión de alta calidad para tu negocio. Desde tarjetas de presentación hasta materiales promocionales con tecnología de vanguardia.
+          Desde impresoras empresariales hasta impresoras de oficina, te ofrecemos las mejores soluciones para tu negocio.
         </p>
-        <div className="mt-10">
+        <div className="mt-10 flex gap-4">
           <a
-            href="#contacto"
+            href="#servicios"
+            onClick={scrollToServices}
             className="inline-block bg-[#137DC5] text-white px-12 py-4 rounded-lg text-xl font-semibold shadow-lg hover:bg-[#07619a] transition duration-300 ease-in-out"
           >
-            Comenzar ahora
+            Conocé más
+          </a>
+          <a
+            href="#contacto"
+            className="inline-block bg-transparent border-2 border-white text-white px-12 py-4 rounded-lg text-xl font-semibold shadow-lg hover:bg-white hover:text-[#137DC5] transition duration-300 ease-in-out"
+          >
+            Contactanos
           </a>
         </div>
       </div>

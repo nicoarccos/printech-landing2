@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import ServiceCard from '@/components/ServiceCard'
 import Footer from '@/components/Footer'
+import SoftwareCarousel from '@/components/SoftwareCarousel'
 import { useState } from 'react'
 
 // Datos detallados de los servicios
@@ -98,9 +99,10 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <SoftwareCarousel />
 
       {/* Sección de Servicios */}
-      <section className="py-20 bg-gray-100">
+      <section id="servicios" className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Nuestros Servicios</h2>
           
