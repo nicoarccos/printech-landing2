@@ -219,7 +219,7 @@ const Hero: FC<HeroProps> = ({ onSelectService }) => {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left h-full flex flex-col justify-center">
               <div className="relative z-10 w-full">
                 <h1 className="text-5xl font-extrabold text-[#fcfad4] sm:text-6xl lg:text-7xl leading-tight">
-                  Insumos de comunicación visual.
+                  Insumos.
                 </h1>
                 <p className="mt-6 text-xl text-white max-w-3xl">
                   Contamos con una amplia gama de insumos de primer nivel y diversas alternativas para comunicacion visual
