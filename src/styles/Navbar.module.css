@@ -1,0 +1,126 @@
+.navbar {
+  background: linear-gradient(90deg, #054269 0%, #07619a 100%);
+  padding: 0.2rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.navbarBrand {
+  color: #fcfad4 !important;
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  margin-right: 0;
+  padding-left: 0;
+  position: relative;
+}
+
+.navbarBrand::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2199ea;
+  transition: width 0.3s ease;
+}
+
+.navbarBrand:hover::after {
+  width: 100%;
+}
+
+.navbarBrand img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+  mix-blend-mode: normal;
+  transition: filter 0.3s ease;
+}
+
+.navbarBrand:hover img {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(190deg) brightness(118%) contrast(119%);
+}
+
+.navLink {
+  color: #fcfad4 !important;
+  font-weight: 500;
+  margin: 0 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: #2199ea !important;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2199ea;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.dropdownMenu {
+  background: #054269;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dropdownItem {
+  color: #fcfad4 !important;
+  transition: all 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background-color: #07619a;
+  color: #2199ea !important;
+}
+
+.navbarToggler {
+  border: 2px solid #fcfad4;
+  margin-right: 1rem;
+}
+
+.navbarTogglerIcon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(252, 250, 212, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: #054269;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: auto;
+    min-width: 200px;
+  }
+
+  .navbar-nav {
+    margin: 0;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .navLink {
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+} 
