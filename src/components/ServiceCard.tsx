@@ -13,7 +13,8 @@ const ServiceCard: FC<ServiceCardProps> = ({ id, title, description, icon, onCar
     <div 
       className="flex flex-col h-full p-6 rounded-lg shadow-xl
                  bg-gradient-to-br from-[#054269] via-[#0f5f96] to-[#137DC5] 
-                 text-white transition-all duration-300 hover:shadow-2xl"
+                 text-white transition-all duration-500 ease-in-out hover:shadow-2xl
+                 transform hover:-translate-y-1"
     >
       {icon && (
         <div className="text-4xl mb-4 text-[#fcfad4]">
@@ -25,8 +26,8 @@ const ServiceCard: FC<ServiceCardProps> = ({ id, title, description, icon, onCar
       <button
         onClick={() => onCardClick(id)}
         className="w-full bg-[#fcfad4] text-[#054269] px-4 py-2 rounded-lg 
-                   font-semibold hover:bg-[#e6e4c0] transition-colors duration-300
-                   transform hover:scale-105 mt-auto"
+                   font-semibold hover:bg-[#e6e4c0] transition-all duration-300
+                   transform hover:scale-105 mt-auto hover:shadow-lg"
       >
         Conoce más
       </button>

@@ -91,22 +91,31 @@ export default function Home() {
     setSelectedServiceId(selectedServiceId === id ? null : id); // Toggle
   };
 
+  // Encontrar el servicio seleccionado por su ID
+  const selectedService = servicesData.find(service => service.id === selectedServiceId);
+
   // Efecto para hacer scroll cuando se selecciona un servicio
   useEffect(() => {
     if (selectedServiceId) {
-      // Encuentra el elemento de la sección de detalles (o la sección de servicios en general)
-      const servicesSection = document.getElementById('servicios'); // Usamos la sección servicios como referencia
-      if (servicesSection) {
-        // Espera un poco para que la transición de expansión termine
-        setTimeout(() => {
-          servicesSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 500); // Mantenemos el delay
-      }
+      // Espera a que la animación de expansión termine
+      setTimeout(() => {
+        // Encuentra el elemento de la sección de servicios
+        const servicesSection = document.getElementById('servicios');
+        if (servicesSection) {
+          // Calcula la posición del elemento
+          const rect = servicesSection.getBoundingClientRect();
+          // Calcula el scroll necesario para que la sección esté centrada en la ventana
+          const scrollPosition = window.scrollY + rect.top - (window.innerHeight / 2) + (rect.height / 2);
+          
+          // Realiza el scroll suave
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 300); // Reducimos el tiempo de espera para una respuesta más rápida
     }
-  }, [selectedServiceId]); // Este efecto se ejecuta cada vez que selectedServiceId cambia
-
-  // Encontrar el servicio seleccionado por su ID
-  const selectedService = servicesData.find(service => service.id === selectedServiceId);
+  }, [selectedServiceId]);
 
   return (
     <main className="min-h-screen">
