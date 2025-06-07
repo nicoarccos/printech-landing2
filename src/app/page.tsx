@@ -120,7 +120,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <Hero />
+      <Hero onSelectService={handleCardClick} />
 
       {/* Sección de Servicios */}
       <section id="servicios" className="py-20 bg-gray-100">
