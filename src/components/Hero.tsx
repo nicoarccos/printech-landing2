@@ -212,7 +212,7 @@ const Hero: FC<HeroProps> = ({ onSelectService }) => {
           <div className="relative w-full h-full overflow-hidden text-white py-20" style={{
             backgroundImage: 'url("/images/impresoras-png.png")',
             backgroundSize: 'cover',
-            backgroundPosition: 'center 5%',
+            backgroundPosition: 'center 85%',
             backgroundRepeat: 'no-repeat'
           }}>
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
